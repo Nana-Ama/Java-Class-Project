@@ -7,7 +7,7 @@ import java.util.*;
 public class readFile2 {
 
 	public static void main (String[] args) {
-		readFile reader = new readFile();
+		readFile2 reader = new readFile2();
 		if ( args.length == 0) 
 			System.out.println( "No files specified" );
 			reader.fileToArray(args[0]);

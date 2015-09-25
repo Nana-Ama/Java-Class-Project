@@ -21,13 +21,13 @@ public class mindReaderCore {
 
 	public int coreGame(String[][] cardArray){
 		int sum = 0;
-		// jumble/shuffle up card
-		for (int i = 0; i <= cardArray.length; i++) {
+		for (int i = 0; i < cardArray.length; i++) {
 			// jumble/shuffle cardArray[i][0]
-			jumbler(cardArray[i]);
+		String[] workingArray = cardArray[i];
+			jumbler(workingArray);
 			// Show Card to user
-			for (int j = 0; j <= cardArray[i].length; j++) {
-				System.out.print(cardArray[j][i] + " ");
+			for (int j = 0; j < cardArray[i].length; j++) {
+				System.out.print(workingArray[j] + " ");
 				if(j%2==0){
 					System.out.println("\n");
 				}	
@@ -35,7 +35,8 @@ public class mindReaderCore {
 		System.out.println("Is your selection in this card?\n (y/n)");
 			if((in.nextLine()).equals("y")) {
 				// add card[1] to sum if 'Yes'
-				sum += Integer.parseInt(cardArray[i][0]);
+				System.out.println(cardArray[i][0]);
+				// sum = sum + cardArray[0][i] + " ";
 			}	
 		}
 		return sum;
