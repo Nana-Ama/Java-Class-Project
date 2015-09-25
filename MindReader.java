@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class MindReader{
+public class mindReader{
 	public static void main(String args[]){
 		//This is the first part. It includes the welcome address, username, choice of play and leads to the main game.
 		int choice;
